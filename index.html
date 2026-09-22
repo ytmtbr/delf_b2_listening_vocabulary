@@ -1,0 +1,746 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>DELF B2 Listening Vocabulary｜仏→日</title>
+<style>
+:root{--bg:#f5f6f8;--card:#fff;--line:#dce2e7;--text:#17212b;--muted:#65717c;--accent:#175c91}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.app{max-width:820px;margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(245,246,248,.97);border-bottom:1px solid var(--line);padding:12px}
+h1{font-size:19px;margin:0 0 5px}
+.desc,.stats{font-size:12px;color:var(--muted);margin:4px 0}
+.controls{display:grid;gap:7px;margin-top:9px}
+input,select,button{font:inherit}
+input,select{width:100%;padding:10px;border:1px solid var(--line);border-radius:10px;background:#fff}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+main{padding:10px 12px 35px}
+.range{font-weight:700;margin:5px 0 10px}
+.card{background:var(--card);border:1px solid var(--line);border-left:5px solid #98a2ab;border-radius:14px;padding:13px;margin:9px 0}
+.card.status-review{border-left-color:#cb8521}
+.card.status-known{border-left-color:#2a8656}
+.top{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}
+.num{font-size:11px;color:var(--muted)}
+.fr{font-size:20px;font-weight:750;margin-top:2px;overflow-wrap:anywhere}
+.badges{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:4px}
+.badge{font-size:10px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:3px 7px;white-space:nowrap}
+details{margin-top:10px}
+summary{color:var(--accent);font-weight:650;cursor:pointer}
+.answer{padding-top:10px}
+.jp{font-size:18px;font-weight:700;line-height:1.5}
+.actions{display:flex;flex-wrap:wrap;gap:6px;margin-top:11px}
+button,.nav{border:1px solid var(--line);background:#fff;border-radius:9px;padding:8px 10px}
+button.active{background:#edf1f4;font-weight:700}
+.speak{margin-top:9px}
+.hidden{display:none!important}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.tab{font-size:12px;font-weight:700;background:#fff}
+.tab.active{background:#edf1f4}
+@media(max-width:520px){.fr{font-size:18px}.jp{font-size:17px}header{padding:10px}main{padding:8px 10px 30px}}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+<h1>DELF B2 Listening Vocabulary｜フランス語 → 日本語</h1>
+<div class="desc">Exam 1で未習だった語のうち、今後も理解できるようにしておきたいB語彙。フランス語を見て意味を思い出してから「日本語を見る」を開きます。</div>
+<div class="controls">
+<input id="search" type="search" placeholder="フランス語・日本語で検索">
+<div class="row">
+<select id="category"><option value="">全カテゴリー</option><option value="抽象名詞">抽象名詞</option>
+<option value="動詞・動詞表現">動詞・動詞表現</option>
+<option value="社会・政治">社会・政治</option>
+<option value="論理・構成">論理・構成</option>
+<option value="日常・人間関係・議論">日常・人間関係・議論</option>
+<option value="形容詞・副詞">形容詞・副詞</option>
+<option value="環境・科学・健康">環境・科学・健康</option>
+<option value="メディア・技術・都市">メディア・技術・都市</option></select>
+<select id="status"><option value="">全ステータス</option><option value="unseen">未学習</option><option value="review">復習中</option><option value="known">覚えた</option></select>
+</div>
+</div>
+<div class="tabs"><button type="button" class="tab active" data-page="1">1–45</button></div>
+<div id="stats" class="stats">全45語</div>
+</header>
+<main>
+<section class="page page-1">
+<div class="range">1〜45語目</div>
+
+<article class="card status-unseen" data-id="listen_exam1_001"
+ data-search="humiliation 屈辱、恥をかかされること 抽象名詞 b2" data-category="抽象名詞" data-level="B2">
+ <div class="top"><div><span class="num">1</span><div class="fr">humiliation</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">抽象名詞</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">屈辱、恥をかかされること</div>
+ <button type="button" class="speak" data-text="humiliation">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_002"
+ data-search="vanter ～を褒める、長所を強調する 動詞・動詞表現 b2" data-category="動詞・動詞表現" data-level="B2">
+ <div class="top"><div><span class="num">2</span><div class="fr">vanter</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">動詞・動詞表現</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">～を褒める、長所を強調する</div>
+ <button type="button" class="speak" data-text="vanter">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_003"
+ data-search="être vécu(e) comme ～として受け止められる 動詞・動詞表現 b2" data-category="動詞・動詞表現" data-level="B2">
+ <div class="top"><div><span class="num">3</span><div class="fr">être vécu(e) comme</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">動詞・動詞表現</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">～として受け止められる</div>
+ <button type="button" class="speak" data-text="être vécu(e) comme">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_004"
+ data-search="détourner de ～からそらす 動詞・動詞表現 b2" data-category="動詞・動詞表現" data-level="B2">
+ <div class="top"><div><span class="num">4</span><div class="fr">détourner de</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">動詞・動詞表現</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">～からそらす</div>
+ <button type="button" class="speak" data-text="détourner de">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_005"
+ data-search="soutenir 支持する／～と主張する 動詞・動詞表現 b2" data-category="動詞・動詞表現" data-level="B2">
+ <div class="top"><div><span class="num">5</span><div class="fr">soutenir</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">動詞・動詞表現</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">支持する／～と主張する</div>
+ <button type="button" class="speak" data-text="soutenir">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_006"
+ data-search="s&#x27;emparer de ～を取り上げる、掌握する 動詞・動詞表現 b2" data-category="動詞・動詞表現" data-level="B2">
+ <div class="top"><div><span class="num">6</span><div class="fr">s&#x27;emparer de</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">動詞・動詞表現</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">～を取り上げる、掌握する</div>
+ <button type="button" class="speak" data-text="s&#x27;emparer de">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_007"
+ data-search="la droite 右派、右翼 社会・政治 b2" data-category="社会・政治" data-level="B2">
+ <div class="top"><div><span class="num">7</span><div class="fr">la droite</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">社会・政治</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">右派、右翼</div>
+ <button type="button" class="speak" data-text="la droite">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_008"
+ data-search="voie 道、方法、方向性 抽象名詞 b2" data-category="抽象名詞" data-level="B2">
+ <div class="top"><div><span class="num">8</span><div class="fr">voie</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">抽象名詞</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">道、方法、方向性</div>
+ <button type="button" class="speak" data-text="voie">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_009"
+ data-search="se prononcer pour / contre ～に賛成／反対の意思を示す 動詞・動詞表現 b2" data-category="動詞・動詞表現" data-level="B2">
+ <div class="top"><div><span class="num">9</span><div class="fr">se prononcer pour / contre</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">動詞・動詞表現</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">～に賛成／反対の意思を示す</div>
+ <button type="button" class="speak" data-text="se prononcer pour / contre">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_010"
+ data-search="du coup その結果、それで 論理・構成 b2" data-category="論理・構成" data-level="B2">
+ <div class="top"><div><span class="num">10</span><div class="fr">du coup</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">論理・構成</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">その結果、それで</div>
+ <button type="button" class="speak" data-text="du coup">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_011"
+ data-search="défenseur 擁護者、支持者 日常・人間関係・議論 b2" data-category="日常・人間関係・議論" data-level="B2">
+ <div class="top"><div><span class="num">11</span><div class="fr">défenseur</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">日常・人間関係・議論</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">擁護者、支持者</div>
+ <button type="button" class="speak" data-text="défenseur">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_012"
+ data-search="allumer （テレビ・電気などを）つける 動詞・動詞表現 b2" data-category="動詞・動詞表現" data-level="B2">
+ <div class="top"><div><span class="num">12</span><div class="fr">allumer</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">動詞・動詞表現</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">（テレビ・電気などを）つける</div>
+ <button type="button" class="speak" data-text="allumer">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_013"
+ data-search="ceux qui ～する人たち 論理・構成 b2" data-category="論理・構成" data-level="B2">
+ <div class="top"><div><span class="num">13</span><div class="fr">ceux qui</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">論理・構成</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">～する人たち</div>
+ <button type="button" class="speak" data-text="ceux qui">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_014"
+ data-search="ne pas pouvoir voir quelqu&#x27;un / quelque chose en peinture ～が大嫌い、～を見るのも嫌 日常・人間関係・議論 b2" data-category="日常・人間関係・議論" data-level="B2">
+ <div class="top"><div><span class="num">14</span><div class="fr">ne pas pouvoir voir quelqu&#x27;un / quelque chose en peinture</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">日常・人間関係・議論</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">～が大嫌い、～を見るのも嫌</div>
+ <button type="button" class="speak" data-text="ne pas pouvoir voir quelqu&#x27;un / quelque chose en peinture">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_015"
+ data-search="avouer 認める、告白する 動詞・動詞表現 b2" data-category="動詞・動詞表現" data-level="B2">
+ <div class="top"><div><span class="num">15</span><div class="fr">avouer</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">動詞・動詞表現</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">認める、告白する</div>
+ <button type="button" class="speak" data-text="avouer">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_016"
+ data-search="quasiment ほぼ、ほとんど 形容詞・副詞 b2" data-category="形容詞・副詞" data-level="B2">
+ <div class="top"><div><span class="num">16</span><div class="fr">quasiment</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">形容詞・副詞</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">ほぼ、ほとんど</div>
+ <button type="button" class="speak" data-text="quasiment">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_017"
+ data-search="gentil / gentille 優しい、かわいい、善良な 形容詞・副詞 b2" data-category="形容詞・副詞" data-level="B2">
+ <div class="top"><div><span class="num">17</span><div class="fr">gentil / gentille</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">形容詞・副詞</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">優しい、かわいい、善良な</div>
+ <button type="button" class="speak" data-text="gentil / gentille">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_018"
+ data-search="rassurer 安心させる 動詞・動詞表現 b2" data-category="動詞・動詞表現" data-level="B2">
+ <div class="top"><div><span class="num">18</span><div class="fr">rassurer</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">動詞・動詞表現</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">安心させる</div>
+ <button type="button" class="speak" data-text="rassurer">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_019"
+ data-search="chasseur / chasseuse 狩人、ハンター 環境・科学・健康 b2" data-category="環境・科学・健康" data-level="B2">
+ <div class="top"><div><span class="num">19</span><div class="fr">chasseur / chasseuse</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">環境・科学・健康</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">狩人、ハンター</div>
+ <button type="button" class="speak" data-text="chasseur / chasseuse">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_020"
+ data-search="félin ネコ科の動物 環境・科学・健康 b2" data-category="環境・科学・健康" data-level="B2">
+ <div class="top"><div><span class="num">20</span><div class="fr">félin</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">環境・科学・健康</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">ネコ科の動物</div>
+ <button type="button" class="speak" data-text="félin">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_021"
+ data-search="griffe （動物の）爪、かぎ爪 環境・科学・健康 b2" data-category="環境・科学・健康" data-level="B2">
+ <div class="top"><div><span class="num">21</span><div class="fr">griffe</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">環境・科学・健康</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">（動物の）爪、かぎ爪</div>
+ <button type="button" class="speak" data-text="griffe">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_022"
+ data-search="dévorer むさぼり食う、食い尽くす 動詞・動詞表現 b2" data-category="動詞・動詞表現" data-level="B2">
+ <div class="top"><div><span class="num">22</span><div class="fr">dévorer</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">動詞・動詞表現</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">むさぼり食う、食い尽くす</div>
+ <button type="button" class="speak" data-text="dévorer">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_023"
+ data-search="craintif / craintive 臆病な、怖がりの 形容詞・副詞 b2" data-category="形容詞・副詞" data-level="B2">
+ <div class="top"><div><span class="num">23</span><div class="fr">craintif / craintive</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">形容詞・副詞</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">臆病な、怖がりの</div>
+ <button type="button" class="speak" data-text="craintif / craintive">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_024"
+ data-search="proie 獲物 環境・科学・健康 b2" data-category="環境・科学・健康" data-level="B2">
+ <div class="top"><div><span class="num">24</span><div class="fr">proie</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">環境・科学・健康</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">獲物</div>
+ <button type="button" class="speak" data-text="proie">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_025"
+ data-search="plonger 潜る／突っ込む 動詞・動詞表現 b2" data-category="動詞・動詞表現" data-level="B2">
+ <div class="top"><div><span class="num">25</span><div class="fr">plonger</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">動詞・動詞表現</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">潜る／突っ込む</div>
+ <button type="button" class="speak" data-text="plonger">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_026"
+ data-search="dingue すごい、狂った（口語） 形容詞・副詞 b2" data-category="形容詞・副詞" data-level="B2">
+ <div class="top"><div><span class="num">26</span><div class="fr">dingue</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">形容詞・副詞</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">すごい、狂った（口語）</div>
+ <button type="button" class="speak" data-text="dingue">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_027"
+ data-search="chasser 狩る 動詞・動詞表現 b2" data-category="動詞・動詞表現" data-level="B2">
+ <div class="top"><div><span class="num">27</span><div class="fr">chasser</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">動詞・動詞表現</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">狩る</div>
+ <button type="button" class="speak" data-text="chasser">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_028"
+ data-search="prolifération 急増、繁殖 環境・科学・健康 b2" data-category="環境・科学・健康" data-level="B2">
+ <div class="top"><div><span class="num">28</span><div class="fr">prolifération</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">環境・科学・健康</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">急増、繁殖</div>
+ <button type="button" class="speak" data-text="prolifération">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_029"
+ data-search="fléau 災厄、深刻な害・社会問題 抽象名詞 b2" data-category="抽象名詞" data-level="B2">
+ <div class="top"><div><span class="num">29</span><div class="fr">fléau</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">抽象名詞</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">災厄、深刻な害・社会問題</div>
+ <button type="button" class="speak" data-text="fléau">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_030"
+ data-search="méfiant / méfiante 用心深い、警戒している 形容詞・副詞 b2" data-category="形容詞・副詞" data-level="B2">
+ <div class="top"><div><span class="num">30</span><div class="fr">méfiant / méfiante</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">形容詞・副詞</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">用心深い、警戒している</div>
+ <button type="button" class="speak" data-text="méfiant / méfiante">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_031"
+ data-search="tomber sur ～に偶然出くわす 動詞・動詞表現 b2" data-category="動詞・動詞表現" data-level="B2">
+ <div class="top"><div><span class="num">31</span><div class="fr">tomber sur</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">動詞・動詞表現</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">～に偶然出くわす</div>
+ <button type="button" class="speak" data-text="tomber sur">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_032"
+ data-search="drapeau 旗、国旗 社会・政治 b2" data-category="社会・政治" data-level="B2">
+ <div class="top"><div><span class="num">32</span><div class="fr">drapeau</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">社会・政治</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">旗、国旗</div>
+ <button type="button" class="speak" data-text="drapeau">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_033"
+ data-search="proclamation 宣言、公布 社会・政治 b2" data-category="社会・政治" data-level="B2">
+ <div class="top"><div><span class="num">33</span><div class="fr">proclamation</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">社会・政治</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">宣言、公布</div>
+ <button type="button" class="speak" data-text="proclamation">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_034"
+ data-search="affranchi(e) de ～から解放された 形容詞・副詞 b2" data-category="形容詞・副詞" data-level="B2">
+ <div class="top"><div><span class="num">34</span><div class="fr">affranchi(e) de</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">形容詞・副詞</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">～から解放された</div>
+ <button type="button" class="speak" data-text="affranchi(e) de">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_035"
+ data-search="imposer 課す、強制する 動詞・動詞表現 b2" data-category="動詞・動詞表現" data-level="B2">
+ <div class="top"><div><span class="num">35</span><div class="fr">imposer</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">動詞・動詞表現</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">課す、強制する</div>
+ <button type="button" class="speak" data-text="imposer">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_036"
+ data-search="démantèlement 解体、撤廃 社会・政治 b2" data-category="社会・政治" data-level="B2">
+ <div class="top"><div><span class="num">36</span><div class="fr">démantèlement</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">社会・政治</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">解体、撤廃</div>
+ <button type="button" class="speak" data-text="démantèlement">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_037"
+ data-search="blé 小麦 日常・人間関係・議論 b2" data-category="日常・人間関係・議論" data-level="B2">
+ <div class="top"><div><span class="num">37</span><div class="fr">blé</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">日常・人間関係・議論</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">小麦</div>
+ <button type="button" class="speak" data-text="blé">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_038"
+ data-search="vignette ステッカー、標章 メディア・技術・都市 b2" data-category="メディア・技術・都市" data-level="B2">
+ <div class="top"><div><span class="num">38</span><div class="fr">vignette</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">メディア・技術・都市</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">ステッカー、標章</div>
+ <button type="button" class="speak" data-text="vignette">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_039"
+ data-search="coller 貼る／くっつく 動詞・動詞表現 b2" data-category="動詞・動詞表現" data-level="B2">
+ <div class="top"><div><span class="num">39</span><div class="fr">coller</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">動詞・動詞表現</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">貼る／くっつく</div>
+ <button type="button" class="speak" data-text="coller">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_040"
+ data-search="pare-brise フロントガラス メディア・技術・都市 b2" data-category="メディア・技術・都市" data-level="B2">
+ <div class="top"><div><span class="num">40</span><div class="fr">pare-brise</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">メディア・技術・都市</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">フロントガラス</div>
+ <button type="button" class="speak" data-text="pare-brise">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_041"
+ data-search="immatriculation 登録、車両登録 メディア・技術・都市 b2" data-category="メディア・技術・都市" data-level="B2">
+ <div class="top"><div><span class="num">41</span><div class="fr">immatriculation</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">メディア・技術・都市</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">登録、車両登録</div>
+ <button type="button" class="speak" data-text="immatriculation">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_042"
+ data-search="léger / légère 軽い 形容詞・副詞 b2" data-category="形容詞・副詞" data-level="B2">
+ <div class="top"><div><span class="num">42</span><div class="fr">léger / légère</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">形容詞・副詞</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">軽い</div>
+ <button type="button" class="speak" data-text="léger / légère">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_043"
+ data-search="lourd / lourde 重い 形容詞・副詞 b2" data-category="形容詞・副詞" data-level="B2">
+ <div class="top"><div><span class="num">43</span><div class="fr">lourd / lourde</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">形容詞・副詞</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">重い</div>
+ <button type="button" class="speak" data-text="lourd / lourde">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_044"
+ data-search="décréter ～を布告する、決定する 社会・政治 b2" data-category="社会・政治" data-level="B2">
+ <div class="top"><div><span class="num">44</span><div class="fr">décréter</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">社会・政治</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">～を布告する、決定する</div>
+ <button type="button" class="speak" data-text="décréter">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+<article class="card status-unseen" data-id="listen_exam1_045"
+ data-search="autoroute 高速道路 メディア・技術・都市 b2" data-category="メディア・技術・都市" data-level="B2">
+ <div class="top"><div><span class="num">45</span><div class="fr">autoroute</div></div>
+ <div class="badges"><span class="badge">B2</span><span class="badge">メディア・技術・都市</span></div></div>
+ <details><summary>日本語を見る</summary><div class="answer">
+ <div class="jp">高速道路</div>
+ <button type="button" class="speak" data-text="autoroute">発音</button>
+ </div></details>
+ <div class="actions">
+ <button type="button" class="status-btn" data-status="unseen">未学習</button>
+ <button type="button" class="status-btn" data-status="review">復習中</button>
+ <button type="button" class="status-btn" data-status="known">覚えた</button>
+ </div>
+</article>
+</section>
+</main>
+</div>
+<script>
+(() => {
+ const KEY='delf_b2_listening_vocab_v1';
+ const cards=[...document.querySelectorAll('.card')];
+ const search=document.getElementById('search'), category=document.getElementById('category'),
+       status=document.getElementById('status'), stats=document.getElementById('stats');
+ let saved={};
+ try{saved=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){saved={}}
+ function applyState(card, st){
+   card.classList.remove('status-unseen','status-review','status-known');
+   card.classList.add('status-'+st);
+   card.dataset.status=st;
+   card.querySelectorAll('.status-btn').forEach(b=>b.classList.toggle('active',b.dataset.status===st));
+ }
+ cards.forEach(card=>{
+   applyState(card,saved[card.dataset.id]||'unseen');
+   card.querySelectorAll('.status-btn').forEach(btn=>btn.addEventListener('click',()=>{
+     const wasOpen=card.querySelector('details').open;
+     const st=btn.dataset.status; applyState(card,st); saved[card.dataset.id]=st;
+     localStorage.setItem(KEY,JSON.stringify(saved));
+     card.querySelector('details').open=wasOpen;
+     filter();
+   }));
+   card.querySelector('.speak').addEventListener('click',e=>{
+     if(!('speechSynthesis' in window)) return;
+     speechSynthesis.cancel();
+     const u=new SpeechSynthesisUtterance(e.currentTarget.dataset.text);
+     u.lang='fr-FR'; speechSynthesis.speak(u);
+   });
+ });
+ function filter(){
+   const q=search.value.trim().toLowerCase(), c=category.value, st=status.value;
+   let n=0;
+   cards.forEach(card=>{
+     const ok=(!q||card.dataset.search.includes(q))&&(!c||card.dataset.category===c)&&(!st||card.dataset.status===st);
+     card.classList.toggle('hidden',!ok); if(ok)n++;
+   });
+   stats.textContent=`表示 ${n} / 全45語`;
+ }
+ [search,category,status].forEach(x=>x.addEventListener(x===search?'input':'change',filter));
+ filter();
+})();
+</script>
+</body></html>
