@@ -35,8 +35,8 @@ button,.nav{border:1px solid var(--line);background:#fff;border-radius:9px;paddi
 button.active{background:#edf1f4;font-weight:700}
 .speak{margin-top:9px}
 .hidden{display:none!important}
-.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
-.tab{font-size:12px;font-weight:700;background:#fff}
+.tabs{display:flex;gap:8px;overflow-x:auto;flex-wrap:nowrap;margin:8px 0 4px;padding-bottom:2px;-webkit-overflow-scrolling:touch;scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}
+.tab{font-size:12px;font-weight:700;background:#fff;white-space:nowrap}
 .tab.active{background:#edf1f4}
 @media(max-width:520px){.fr{font-size:18px}.jp{font-size:17px}header{padding:10px}main{padding:8px 10px 30px}}
 </style>
@@ -44,7 +44,7 @@ button.active{background:#edf1f4;font-weight:700}
 <style>
 .range-tab{
   appearance:none;border:1px solid #d0d5dd;background:#fff;color:#344054;
-  border-radius:10px;padding:8px 14px;font-weight:700;cursor:pointer;
+  border-radius:10px;padding:9px 14px;font-weight:700;cursor:pointer;white-space:nowrap;flex:0 0 auto;
 }
 .range-tab.active{background:#101828;color:#fff;border-color:#101828}
 </style>
@@ -69,19 +69,20 @@ button.active{background:#edf1f4;font-weight:700}
 <select id="status"><option value="">全ステータス</option><option value="unseen">未学習</option><option value="review">復習中</option><option value="known">覚えた</option></select>
 </div>
 </div>
-<div class="tabs"><button type="button" class="tab active" data-page="1">1–201</button></div>
-<div id="stats" class="stats">全201語</div>
+<nav class="tabs" id="rangeTabs">
+  <button type="button" class="range-tab active" data-range-start="1" data-range-end="50">1–50</button>
+  <button type="button" class="range-tab" data-range-start="51" data-range-end="100">51–100</button>
+  <button type="button" class="range-tab" data-range-start="101" data-range-end="150">101–150</button>
+  <button type="button" class="range-tab" data-range-start="151" data-range-end="200">151–200</button>
+  <button type="button" class="range-tab" data-range-start="201" data-range-end="201">201</button>
+</nav>
+<div id="stats" class="stats">表示 50 / 全201語</div>
 </header>
 <main>
 <section class="page page-1">
-<div class="range">1〜201語目</div>
+<div class="range" id="currentRange">1〜50語目</div>
 
 
-<div class="range-tabs" id="rangeTabs" style="display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 16px;">
-  <button type="button" class="range-tab active" data-range-start="1" data-range-end="50">1–50</button>
-  <button type="button" class="range-tab" data-range-start="51" data-range-end="100">51–100</button>
-  <button type="button" class="range-tab" data-range-start="101" data-range-end="150">101–201</button>
-</div>
 <article class="card status-unseen" data-id="listen_exam1_001"
  data-search="humiliation 屈辱、恥をかかされること 抽象名詞 b2" data-category="抽象名詞" data-level="B2">
  <div class="top"><div><span class="num">1</span><div class="fr">humiliation</div></div>
@@ -830,83 +831,95 @@ button.active{background:#edf1f4;font-weight:700}
 </div>
 <script>
 (() => {
- const KEY='delf_b2_listening_vocab_v1';
- const cards=[...document.querySelectorAll('.card')];
- const search=document.getElementById('search'), category=document.getElementById('category'),
-       status=document.getElementById('status'), stats=document.getElementById('stats');
- let saved={};
- try{saved=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){saved={}}
- function applyState(card, st){
-   card.classList.remove('status-unseen','status-review','status-known');
-   card.classList.add('status-'+st);
-   card.dataset.status=st;
-   card.querySelectorAll('.status-btn').forEach(b=>b.classList.toggle('active',b.dataset.status===st));
- }
- cards.forEach(card=>{
-   applyState(card,saved[card.dataset.id]||'unseen');
-   card.querySelectorAll('.status-btn').forEach(btn=>btn.addEventListener('click',()=>{
-     const wasOpen=card.querySelector('details').open;
-     const st=btn.dataset.status; applyState(card,st); saved[card.dataset.id]=st;
-     localStorage.setItem(KEY,JSON.stringify(saved));
-     card.querySelector('details').open=wasOpen;
-     filter();
-   }));
-   card.querySelector('.speak').addEventListener('click',e=>{
-     if(!('speechSynthesis' in window)) return;
-     speechSynthesis.cancel();
-     const u=new SpeechSynthesisUtterance(e.currentTarget.dataset.text);
-     u.lang='fr-FR'; speechSynthesis.speak(u);
-   });
- });
- function filter(){
-   const q=search.value.trim().toLowerCase(), c=category.value, st=status.value;
-   let n=0;
-   cards.forEach(card=>{
-     const ok=(!q||card.dataset.search.includes(q))&&(!c||card.dataset.category===c)&&(!st||card.dataset.status===st);
-     card.classList.toggle('hidden',!ok); if(ok)n++;
-   });
-   stats.textContent=`表示 ${n} / 全201語`;
- }
- [search,category,status].forEach(x=>x.addEventListener(x===search?'input':'change',filter));
- filter();
-})();
-</script>
+  const KEY='delf_b2_listening_vocab_v1';
+  const cards=[...document.querySelectorAll('.card')];
+  const search=document.getElementById('search');
+  const category=document.getElementById('category');
+  const status=document.getElementById('status');
+  const stats=document.getElementById('stats');
+  const currentRange=document.getElementById('currentRange');
+  const rangeTabs=[...document.querySelectorAll('.range-tab')];
 
-<script>
-(function(){
-  let activeStart = 1, activeEnd = 50;
-  const tabs = Array.from(document.querySelectorAll('.range-tab'));
+  let activeStart=1, activeEnd=50;
+  let saved={};
+  try{saved=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){saved={}}
 
-  function applyRange(){
-    document.querySelectorAll('article.card').forEach(card => {
-      const n = parseInt(card.querySelector('.num')?.textContent || '0', 10);
-      card.dataset.rangeHidden = (n < activeStart || n > activeEnd) ? '1' : '0';
-      if (card.dataset.rangeHidden === '1') {
-        card.style.display = 'none';
-      } else {
-        card.style.display = '';
-      }
-    });
+  function applyState(card, st){
+    card.classList.remove('status-unseen','status-review','status-known');
+    card.classList.add('status-'+st);
+    card.dataset.status=st;
+    card.querySelectorAll('.status-btn').forEach(
+      b=>b.classList.toggle('active',b.dataset.status===st)
+    );
   }
 
-  tabs.forEach(btn => {
-    btn.addEventListener('click', () => {
-      activeStart = parseInt(btn.dataset.rangeStart,10);
-      activeEnd = parseInt(btn.dataset.rangeEnd,10);
-      tabs.forEach(x => x.classList.toggle('active', x === btn));
-      applyRange();
-      window.scrollTo({top: document.getElementById('rangeTabs').offsetTop - 12, behavior:'smooth'});
+  function filter(){
+    const q=search.value.trim().toLowerCase();
+    const c=category.value;
+    const st=status.value;
+    let n=0;
+
+    cards.forEach(card=>{
+      const num=parseInt(card.querySelector('.num')?.textContent||'0',10);
+      const inRange=num>=activeStart && num<=activeEnd;
+      const matches=(!q||card.dataset.search.includes(q))
+        &&(!c||card.dataset.category===c)
+        &&(!st||card.dataset.status===st);
+      const show=inRange && matches;
+      card.classList.toggle('hidden',!show);
+      if(show)n++;
+    });
+
+    stats.textContent=`表示 ${n} / 全201語`;
+    currentRange.textContent=activeStart===activeEnd
+      ? `${activeStart}語目`
+      : `${activeStart}〜${activeEnd}語目`;
+  }
+
+  cards.forEach(card=>{
+    applyState(card,saved[card.dataset.id]||'unseen');
+
+    card.querySelectorAll('.status-btn').forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        const details=card.querySelector('details');
+        const wasOpen=details.open;
+        const st=btn.dataset.status;
+        applyState(card,st);
+        saved[card.dataset.id]=st;
+        localStorage.setItem(KEY,JSON.stringify(saved));
+        details.open=wasOpen; // status change must not close the answer
+        filter();
+      });
+    });
+
+    const speak=card.querySelector('.speak');
+    if(speak){
+      speak.addEventListener('click',e=>{
+        if(!('speechSynthesis' in window)) return;
+        speechSynthesis.cancel();
+        const u=new SpeechSynthesisUtterance(e.currentTarget.dataset.text);
+        u.lang='fr-FR';
+        speechSynthesis.speak(u);
+      });
+    }
+  });
+
+  rangeTabs.forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      activeStart=parseInt(btn.dataset.rangeStart,10);
+      activeEnd=parseInt(btn.dataset.rangeEnd,10);
+      rangeTabs.forEach(x=>x.classList.toggle('active',x===btn));
+      btn.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+      filter();
+      window.scrollTo({top:0,behavior:'smooth'});
     });
   });
 
-  // Re-apply after existing search/status/category filters may run.
-  document.addEventListener('input', () => setTimeout(applyRange, 0));
-  document.addEventListener('change', () => setTimeout(applyRange, 0));
-  document.addEventListener('click', e => {
-    if (!e.target.closest('.range-tab')) setTimeout(applyRange, 0);
-  });
+  search.addEventListener('input',filter);
+  category.addEventListener('change',filter);
+  status.addEventListener('change',filter);
 
-  applyRange();
+  filter();
 })();
 </script>
 
